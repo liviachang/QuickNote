@@ -26,3 +26,8 @@
         pip install thrift==0.9.3
         pip install impyla==0.13.8
     ```
+
+- Regular expression replace
+    ```python
+    pdesc['stylecolor'] = pdesc['sku'].apply(lambda x: re.sub(r'(\d+)-(\w+)-(\w+)', r'\1-\2', x))
+    ```
